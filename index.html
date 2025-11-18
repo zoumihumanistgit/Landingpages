@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="branding">
+        <div class="logo-circle">LP</div>
+        <div>
+          <p class="eyebrow">Concept Studio</p>
+          <h1>Landing Page Generator</h1>
+          <p class="lede">
+            Select a category and market segment to instantly build a polished
+            landing page with curated imagery, typography, and layout.
+          </p>
+        </div>
+      </div>
+      <div class="header-decoration"></div>
+    </header>
+
+    <main class="layout">
+      <section class="controls" aria-label="Landing page options">
+        <div class="card">
+          <div class="card-header">
+            <p class="eyebrow">Step 1</p>
+            <h2>Choose your focus</h2>
+            <p class="hint">Pair a category with a market segment.</p>
+          </div>
+          <div class="form-grid">
+            <label class="field">
+              <span>Category</span>
+              <select id="categorySelect"></select>
+            </label>
+            <label class="field">
+              <span>Market segment</span>
+              <select id="segmentSelect"></select>
+            </label>
+          </div>
+          <button id="generateBtn" class="primary">Generate landing page</button>
+        </div>
+        <div class="card secondary">
+          <div class="card-header">
+            <p class="eyebrow">Style guide</p>
+            <h3>Design DNA</h3>
+          </div>
+          <ul class="style-list">
+            <li>Modern gradients and glassmorphism overlays</li>
+            <li>Readable pairing of Inter and Playfair Display</li>
+            <li>Illustrative photography from Unsplash by default</li>
+            <li>Accent buttons and badges for strong calls to action</li>
+          </ul>
+          <div class="palette" id="palettePreview"></div>
+        </div>
+      </section>
+
+      <section class="preview" aria-label="Generated landing page preview">
+        <div id="landingPreview" class="landing-shell" aria-live="polite">
+          <p class="empty">Choose a category and segment to generate a landing page.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>Crafted with a flexible component system. Tweak the inputs and regenerate to explore new directions.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
